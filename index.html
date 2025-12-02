@@ -67,7 +67,8 @@
             list-style: none;
             padding: 0;
             display: grid; /*  격자 모양으로 배치 */
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 칸의 최소 너비를 200px, 공간이 남으면 체운다. 화면 폭에 맞춰서 한 줄에 들어갈 개수를 자동으로 계산한다.*/
+            /* 칸의 최소 너비를 200px, 공간이 남으면 체운다. 화면 폭에 맞춰서 한 줄에 들어갈 개수를 자동으로 계산한다.*/
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
 
@@ -78,7 +79,7 @@
             border-radius: 8px;
         }
 
-        .opening_icon{
+        .opening-icon{
             width: 100%;
             max-width: 100px;
             height: auto;
@@ -88,6 +89,16 @@
         }
 
         .piece-icon { font-size: 3rem; display: block; margin-bottom: 10px; }
+        
+        .opening {
+            list-style: none;
+            display: grid;
+            padding: 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .opening-item {text-align: center;}
 
         footer {
             text-align: center;
@@ -212,21 +223,25 @@
 
         <section id="opening">
             <h2>주요 오프닝</h2>
-            <ul>
-                <li>
-                    <img src="Italian Game.png" class="opening_icon">
+            <ul class="opening">
+                <li class="opening-item">
+                    <img src="Italian Game.png" class="opening-icon">
+                    <br>
                     <a href="Italian Game.html" target="_blank">이탈리안 게임</a>
                 </li>
-                <li>
-                    <img src="Ruy Lopez.png" class="opening_icon">
+                <li class="opening-item">
+                    <img src="Ruy Lopez.png" class="opening-icon">
+                    <br>
                     <a href="Ruy Lopez.html" target="_blank">루이 로페즈</a>
                 </li>
-                <li>
-                    <img src="Queen's Gambit.png" class="opening_icon">
+                <li class="opening-item">
+                    <img src="Queen's Gambit.png" class="opening-icon">
+                    <br>
                     <a href="Queen's Gambit.html" target="_blank">퀸스 갬빗</a>
                 </li>
-                <li>
-                    <img src="Sicilian Defense.png" class="opening_icon">
+                <li class="opening-item">
+                    <img src="Sicilian Defense.png" class="opening-icon">
+                    <br>
                     <a href="Sicilian Defense.html" target="_blank">시실리안 디펜스</a>
                 </li>
             </ul>
